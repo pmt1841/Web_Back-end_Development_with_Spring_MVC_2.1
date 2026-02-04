@@ -1,6 +1,6 @@
 package org.example.currency_conversion.controller;
 
-import org.example.currency_conversion.service.ConverterServiceInterface;
+import org.example.currency_conversion.service.ConverterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class ConverterController {
     @Autowired
-    ConverterServiceInterface converterService;
+    ConverterService converterService;
 
     @PostMapping("/convert")
     public String convert(@RequestParam(name = "usd") double usd, @RequestParam(name = "rate") double rate, Model model) {

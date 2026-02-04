@@ -1,5 +1,5 @@
 package org.example.currency_conversion.service;
 
-public interface ConverterServiceInterface {
+public interface ConverterService {
     double convert(double usd, double rate);
 }
